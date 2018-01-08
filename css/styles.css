@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700i|Source+Sans+Pro:400,700');
+
 body {
-  font-family: sans-serif;
+  font-family: "Source Sans Pro";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ed2939;
+}
+
+header nav {
+  margin: 0;
+  padding: 0 10px;
+  background-color: #ed2939;
+}
+
+header nav a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 15px;
+  color: white;
+  vertical-align: middle;
+}
+
+header nav a:hover {
+  background-color: #f73e4d;
+}
+
+header nav #brand {
+  font-size: 22px;
+  font-family: Montserrat;
+  padding: 7px 10px;
+}
+
+header nav #brand:hover {
+  background-color: #ed2939;
+}
+
+header nav #dropdown-container {
+  display: inline-block;
+}
+
+header nav #dropdown-content {
+  display: none;
+  position: absolute;
+  margin: 0 5px;
+  background-color: #f73e4d;
+  transition-duration: 1;
+}
+
+header nav #dropdown-content.show {
+  display: block;
+}
+
+header nav #dropdown-content a {
+  display: block;
 }
