@@ -32,6 +32,8 @@ header nav a:hover {
 header nav #brand {
   font-size: 22px;
   font-family: Montserrat;
+  font-style: italic;
+  font-weight: 700;
   padding: 7px 10px;
 }
 
@@ -44,15 +46,11 @@ header nav #dropdown-container {
 }
 
 header nav #dropdown-content {
-  display: none;
+  height: 0;
   position: absolute;
   margin: 0 5px;
   background-color: #f73e4d;
-  transition-duration: 1;
-}
-
-header nav #dropdown-content.show {
-  display: block;
+  overflow: hidden;
 }
 
 header nav #dropdown-content a {

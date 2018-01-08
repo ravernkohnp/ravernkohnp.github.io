@@ -1,14 +1,46 @@
 // Keep everything within this function.
-window.onload = function() {
+$(document).ready(function() {
     // Include the header HTML.
     w3.includeHTML(function() {
         // Dropdown menu.
-        $("#dropdown-container").hover(function() {
-            $("#dropdown-content").addClass("show");
-            $("#dropdown").css("background-color", "#f73e4d");
-        }, function() {
-            $("#dropdown-content").removeClass("show");
-            $("#dropdown").css("background-color", "#ed2939");
-        });
+        $("#dropdown-container").hover(toggleDropdown(true), toggleDropdown(false));
+        $("#dropdown").on("click touch", toggleDropdown());
     });
-};
+});
+
+// Toggles the dropdown.
+var droppeddown = false;
+function toggleDropdown(force) {
+    return function() {
+        droppeddown = !droppeddown;
+        if (force !== undefined) {
+            droppeddown = force;
+        }
+        if (droppeddown) {
+            var height = getDropdownHeight();
+            $("#dropdown-content").animate({
+                height: height + "px",
+            }, 300);
+            $("#dropdown").css("background-color", "#f73e4d");
+        } else {
+            $("#dropdown-content").animate({
+                height: 0,
+            }, 300);
+            $("#dropdown").css("background-color", "#ed2939");
+        }
+    };
+}
+
+// Get the height of dropdown content.
+function getDropdownHeight() {
+    var content = $("#dropdown-content");
+    var height;
+    content
+        .css("overflow", "auto")
+        .css("height", "auto");
+    height = content.outerHeight();
+    content
+        .css("overflow", "hidden")
+        .css("height", "0");
+    return height;
+}
