@@ -1,3 +1,4 @@
 window.onload = function() {
-  console.log("It's working!")
+    // Include the header HTML.
+    w3.includeHTML();
 };
