@@ -1,4 +1,3 @@
-// Keep everything within this function.
 $(document).ready(function() {
     // Include the header HTML.
     w3.includeHTML(function() {
