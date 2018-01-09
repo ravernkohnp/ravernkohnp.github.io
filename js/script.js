@@ -21,12 +21,15 @@ function toggleDropdown(force) {
             $("#dropdown-content").animate({
                 height: height + "px",
             }, 300);
-            $("#dropdown").css("background-color", "#f73e4d");
+            $("#dropdown").css("color", "black")
+            $("#dropdown").css("background-color", "white")
         } else {
             $("#dropdown-content").animate({
                 height: 0,
-            }, 300);
-            $("#dropdown").css("background-color", "#ed2939");
+            }, 300, function() {
+                $("#dropdown").css("color", "white")
+                $("#dropdown").css("background-color", "")
+            });
         }
     };
 }

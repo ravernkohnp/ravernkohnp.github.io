@@ -11,10 +11,12 @@ a {
   color: #ed2939;
 }
 
+header {
+  position: absolute;
+}
+
 header nav {
-  margin: 0;
   padding: 0 10px;
-  background-color: #ed2939;
 }
 
 header nav a {
@@ -26,7 +28,8 @@ header nav a {
 }
 
 header nav a:hover {
-  background-color: #f73e4d;
+  color: black;
+  background-color: white;
 }
 
 header nav #brand {
@@ -38,7 +41,8 @@ header nav #brand {
 }
 
 header nav #brand:hover {
-  background-color: #ed2939;
+  color: #ed2939;
+  background-color: white;
 }
 
 header nav #dropdown-container {
@@ -49,10 +53,19 @@ header nav #dropdown-content {
   height: 0;
   position: absolute;
   margin: 0 5px;
-  background-color: #f73e4d;
+  background-color: white;
   overflow: hidden;
 }
 
 header nav #dropdown-content a {
   display: block;
+  color: black;
+}
+
+main #slideshow {
+  display: block;
+  background-image: url('../media/gbtb.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
