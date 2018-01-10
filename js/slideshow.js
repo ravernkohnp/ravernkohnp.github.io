@@ -3,7 +3,7 @@ var slideshowData = [
         image: "tampines.png",
         h3: "Hang out in",
         h1: "Tampines West",
-        url: "#",
+        url: "tampines.html",
     },
     {
         image: "clementi.png",

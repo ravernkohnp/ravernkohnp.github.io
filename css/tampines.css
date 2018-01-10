@@ -1,0 +1,7 @@
+main #hero {
+  display: block;
+  height: 100vh;
+  background-image: url("../media/tampines.png");
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,31 @@
+main #slideshow {
+  display: block;
+  background-image: url("../media/tampines.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+main #slideshow-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Source Sans Pro";
+}
+
+main #slideshow-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+main #slideshow-content h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main #slideshow-content a {
+  margin-top: 8px;
+}
