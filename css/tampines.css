@@ -1,7 +1,29 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 main #hero {
-  display: block;
-  height: 100vh;
+  display: flex;
+  height: 400px;
   background-image: url("../media/tampines.png");
   background-position: center;
   background-size: cover;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main #hero h1 {
+  font-size: 2em;
+}
+
+main #hero p {
+  max-width: 300px;
+}
+
+main section {
+  max-width: 920px;
+  margin: 0 auto;
 }
