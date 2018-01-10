@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, img {
   margin: 0;
 }
 
@@ -26,4 +26,13 @@ main #hero p {
 main section {
   max-width: 920px;
   margin: 0 auto;
+  padding: 10px 10px;
+}
+
+main section h1 {
+  font-size: 1.8em;
+}
+
+main section img {
+  max-width: 80%;
 }
