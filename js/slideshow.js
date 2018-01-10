@@ -26,14 +26,14 @@ var slideshowData = [
 ];
 var currentSlide = 0;
 
-$(document).ready(function() {
+function slideshowReady() {
     // Set slideshow timer
     setInterval(function() {
         // Update current slide
         currentSlide = (currentSlide + 1) % slideshowData.length;
         updateSlide();
     }, 5000);
-});
+}
 
 // Updates the current image
 function updateSlide() {
