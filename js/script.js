@@ -22,12 +22,14 @@ function toggleDropdown(force) {
             }, 150);
             $("#dropdown").css("color", "black")
             $("#dropdown").css("background-color", "white")
+            console.log('true');
         } else {
             $("#dropdown-content").animate({
                 height: 0,
             }, 150, function() {
-                $("#dropdown").css("color", "white")
-                $("#dropdown").css("background-color", "")
+                $("#dropdown").css("color", "white");
+                $("#dropdown").css("background-color", "transparent");
+                console.log('false');
             });
         }
     };
