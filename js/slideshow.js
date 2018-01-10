@@ -1,27 +1,27 @@
 var slideshowData = [
     {
-        image: "mbs.png",
-        h3: "The Luxurious",
-        h1: "Marina Bay Sands",
-        url: "marina-bay-sands.html",
+        image: "tampines.png",
+        h3: "Hang out in",
+        h1: "Tampines West",
+        url: "#",
     },
     {
-        image: "gbtb.jpg",
-        h3: "The Extravagant",
-        h1: "Gardens by the Bay",
-        url: "gardens-by-the-bay.html",
+        image: "clementi.png",
+        h3: "Simply",
+        h1: "Clementi",
+        url: "#",
     },
     {
-        image: "sgflyer.jpg",
-        h3: "The Revolutionary",
-        h1: "Singapore Flyer",
-        url: "singapore-flyer.html",
+        image: "yuhua.png",
+        h3: "Have fun in",
+        h1: "Yuhua",
+        url: "#",
     },
     {
-        image: "merlion.jpg",
-        h3: "The Majestic",
-        h1: "Merlion of Singapore",
-        url: "merlion.html",
+        image: "jurong.png",
+        h3: "Look forward to",
+        h1: "Jurong Green",
+        url: "#",
     },
 ];
 var currentSlide = 0;
