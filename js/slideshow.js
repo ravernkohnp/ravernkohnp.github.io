@@ -63,5 +63,6 @@ function updateSlide() {
         $("#slideshow-content h3").text(slide.h3);
         $("#slideshow-content h1").text(slide.h1);
         $("#slideshow").css("background-image", 'url("../media/' + slide.image + '")');
+        $("#slideshow-content a").attr("href", slide.url);
     });
 }

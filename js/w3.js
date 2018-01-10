@@ -143,7 +143,7 @@ w3.filterHTML = function(id, sel, filter) {
       if (b[ii].innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
         hit = 1;
       }
-      c = b[iigetElementsByTagName("*");
+      c = b[ii].getElementsByTagName("*");
       for (iii = 0; iii < c.length; iii++) {
         if (c[iii].innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
           hit = 1;
@@ -176,7 +176,8 @@ w3.sortHTML = function(id, sel, sortvalue) {
             v1 = b[ii].innerHTML.toLowerCase();
             v2 = b[ii + 1].innerHTML.toLowerCase();
           }
-          if ((j == 0 && (v1 > v2)) ||            bytt = 1;
+          if ((j == 0 && (v1 > v2)) || (j == 1 && (v1 < v2))) {
+            bytt = 1;
             break;
           }
         }
@@ -289,7 +290,7 @@ w3.getElementsByAttribute = function (x, att) {
   l = y.length;
   for (i = -1; i < l; i += 1) {
     if (i == -1) {y[i] = x;}
-    if (y[i.getAttribute(z) !== null) {arrCount += 1; arr[arrCount] = y[i];}
+    if (y[i].getAttribute(z) !== null) {arrCount += 1; arr[arrCount] = y[i];}
   }
   return arr;
 };  
@@ -318,7 +319,7 @@ w3.displayObject = function (id, data) {
         rowClone = arr[j];
         rowClone = w3_replace_curly(rowClone, "element", repeatX, repeatObj[x]);
         a = rowClone.attributes;
-       for (ii = 0; ii < a.length; ii += 1) {
+        for (ii = 0; ii < a.length; ii += 1) {
           a[ii].value = w3_replace_curly(a[ii], "attribute", repeatX, repeatObj[x]).value;
         }
         (i === repeatObj.length) ? arr[j].parentNode.replaceChild(rowClone, arr[j]) : arr[j].parentNode.insertBefore(rowClone, arr[j]);
