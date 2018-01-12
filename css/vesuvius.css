@@ -27,8 +27,7 @@ main {
 }
 
 main #content {
-  background-color: white;
-  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 30px;
 }
 
@@ -54,11 +53,75 @@ main #content .image img {
   margin: 0 auto;
   margin-bottom: 10px;
   width: 640px;
-  max-width: 110%;
+  max-width: 100%;
 }
 
 main #content .image p {
   display: block;
   font-size: 0.8em;
   color: #777777;
+}
+
+form {
+  background-color: white;
+  padding: 10px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  padding-right: 8px;
+}
+
+form fieldset legend {
+  font-weight: bold;
+}
+
+form #diet {
+  margin: 10px 0;
+}
+
+form #diet label {
+  padding-bottom: 5px;
+}
+
+form label {
+  display: block;
+}
+
+form input[type="text"], input[type="submit"], select, textarea {
+  display: block;
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  padding: 5px;
+  border: none;
+  margin: 10px 0;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input[type="text"], select, textarea {
+  width: 100%;
+}
+
+form input[type="submit"] {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 10px;
+}
+
+form input[type="submit"]:hover {
+  background-color: black;
+  color: white;
 }

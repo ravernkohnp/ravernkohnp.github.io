@@ -32,16 +32,16 @@
         <div id="content">
             <section>
                 <h1>Mount Vesuvius</h1>
-                <p>Famous for the 79AD eruption that wiped out the Roman cities of Pompeii and Herculaneum.</p>
+                <p>Famous for the 79 AD eruption that wiped out the Roman cities of Pompeii and Herculaneum.</p>
                 <div class="image">
-                    <img src="media/krakatoa.jpg" />
-                    <p>People trying to escape from the eruption in 79 AD</p>
+                    <a href="media/vesuvius/victims.jpg"><img src="media/vesuvius/victims.jpg" /></a>
+                    <p>Victims of the 79 AD eruption</p>
                 </div>
             </section>
             <section>
                 <h2>About</h2>
                 <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
-                <h3>Some statistics</h3>
+                <h3>Some facts</h3>
                 <ul>
                     <li>5 explosions</li>
                     <li>3 earthquakes</li>
@@ -50,11 +50,40 @@
             </section>
             <section>
                 <h2>Eruptions</h2>
-                <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
+                <p>Mount Vesuvius has experienced eight major eruptions in the last 17,000 years. The 79 AD eruption is one of the most well-known ancient eruptions in the world, and may have killed more than 16,000 people. Ash, mud and rocks from this eruption buried the cities of Pompeii and Herculaneum. Pompeii is famous for the casts the hot ash formed around victims of the eruptions. The unfortunate people suffocated on ash in the air, which then covered them and preserved amazing details of their clothing and faces.</p>
+                <div class="image">
+                    <a href="media/vesuvius/eruption.jpg"><img src="media/vesuvius/eruption.jpg" /></a>
+                    <p>Mount Vesuvius erupting</p>
+                </div>
+                <p>Starting in 1631, Vesuvius entered a period of steady volcanic activity, including lava flows and eruptions of ash and mud. Violent eruptions in the late 1700s, 1800s and early 1900s created more fissures, lava flows, and ash-and-gas explosions. These damaged or destroyed many towns around the volcano, and sometimes killed people; the eruption of 1906 had more than 100 casualties. The most recent eruption was in 1944 during World War II. It caused major problems for the newly-arrived Allied forces in Italy when ash and rocks from the eruption destroyed planes and forced evacuations at a nearby airbase.</p>
             </section>
             <section>
                 <h2>Tours</h2>
-                <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
+                <p>We have yearly tours around the volcano. Not for the faint hearted!</p>
+                <form>
+                    <fieldset>
+                        <legend>Tour Details</legend>
+                        <select id="kind" name="kind">
+                            <option>Select Kind of Tour</option>
+                        </select>
+                        <select id="month" name="month">
+                            <option>Select Month</option>
+                        </select>
+                        <div id="diet">
+                            <label for="diet">Dietary Requirements</label>
+                            <input type="radio" name="diet" id="halal" value="halal" />Halal<br />
+                            <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
+                            <input type="radio" name="diet" id="none" value="none" />None
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contact Details</legend>
+                        <input type="text" id="name" name="name" placeholder="Name" required />
+                        <input type="text" id="contact" name="contact" placeholder="Contact" required />
+                        <textarea id="address" name="address" placeholder="Address" required></textarea>
+                    </fieldset>
+                    <input type="submit" value="Sign up!" />
+                </form>
             </section>
         </div>
         </main>
