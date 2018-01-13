@@ -41,7 +41,7 @@
             <section>
                 <h2>About</h2>
                 <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
-                <h3>Some facts</h3>
+                <h3>Some statistics</h3>
                 <ul>
                     <li>5 explosions</li>
                     <li>3 earthquakes</li>
@@ -59,19 +59,34 @@
             </section>
             <section>
                 <h2>Tours</h2>
-                <p>We have yearly tours around the volcano. Not for the faint hearted!</p>
+                <p>We have tours around the volcano on the 10th of each month. Not for the faint hearted!</p>
                 <form>
                     <fieldset>
                         <legend>Tour Details</legend>
-                        <select id="kind" name="kind">
-                            <option>Select Kind of Tour</option>
+                        <select id="kind" name="kind" required>
+                            <option value="">Select Kind of Tour</option>
+                            <option value="hike">Hiking</option>
+                            <option value="sight">Sightseeing</option>
+                            <option value="heli">Helicopter</option>
                         </select>
-                        <select id="month" name="month">
-                            <option>Select Month</option>
+                        <select id="month" name="month" required>
+                            <option value="">Select Month</option>
+                            <option value="jan">January</option>
+                            <option value="feb">February</option>
+                            <option value="mar">March</option>
+                            <option value="apr">April</option>
+                            <option value="may">May</option>
+                            <option value="jun">June</option>
+                            <option value="jul">July</option>
+                            <option value="aug">August</option>
+                            <option value="sep">September</option>
+                            <option value="oct">October</option>
+                            <option value="nov">November</option>
+                            <option value="dec">December</option>
                         </select>
                         <div id="diet">
                             <label for="diet">Dietary Requirements</label>
-                            <input type="radio" name="diet" id="halal" value="halal" />Halal<br />
+                            <input type="radio" name="diet" id="halal" value="halal" required />Halal<br />
                             <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
                             <input type="radio" name="diet" id="none" value="none" />None
                         </div>
@@ -79,7 +94,8 @@
                     <fieldset>
                         <legend>Contact Details</legend>
                         <input type="text" id="name" name="name" placeholder="Name" required />
-                        <input type="text" id="contact" name="contact" placeholder="Contact" required />
+                        <!-- This contact number is not limited to Singaporeans -->
+                        <input type="text" id="contact" name="contact" placeholder="Contact" pattern="[+ 0-9]+" required />
                         <textarea id="address" name="address" placeholder="Address" required></textarea>
                     </fieldset>
                     <input type="submit" value="Sign up!" />
