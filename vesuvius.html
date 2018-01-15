@@ -20,6 +20,7 @@
         <script>window.w3 || document.write('<script src="js/w3.js"><\/script>')</script>
 
         <script src="js/dropdown.js"></script>
+        <script src="js/scroll.js"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -29,134 +30,146 @@
             <div w3-include-html="nav.html"></div>
         </header>
         <main>
-        <div id="content">
-            <section>
-                <h1>Mount Vesuvius</h1>
-                <p>Famous for the 79 AD eruption that wiped out the Roman cities of Pompeii and Herculaneum.</p>
-                <div class="image">
-                    <a href="media/vesuvius/victims.jpg"><img src="media/vesuvius/victims.jpg" /></a>
-                    <p>Victims of the 79 AD eruption</p>
-                </div>
-            </section>
-            <section>
-                <h2>About</h2>
-                <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
-                <h3>Quick facts</h3>
-                <ul>
-                    <li>Located in the West Coast of Italy</li>
-                    <li>Coordinates are 40°49′N 14°26′E</li>
-                    <li>1,281m elevation</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Complex_volcano" target="_blank">Complex</a> type of volcano</li>
-                    <li>Last eruption in 1944</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Eruptions</h2>
-                <p>Mount Vesuvius has experienced eight major eruptions in the last 17,000 years. The 79 AD eruption is one of the most well-known ancient eruptions in the world, and may have killed more than 16,000 people. Ash, mud and rocks from this eruption buried the cities of Pompeii and Herculaneum. Pompeii is famous for the casts the hot ash formed around victims of the eruptions. The unfortunate people suffocated on ash in the air, which then covered them and preserved amazing details of their clothing and faces.</p>
-                <div class="image">
-                    <a href="media/vesuvius/eruption.jpg"><img src="media/vesuvius/eruption.jpg" /></a>
-                    <p>Mount Vesuvius erupting</p>
-                </div>
-                <p>Starting in 1631, Vesuvius entered a period of steady volcanic activity, including lava flows and eruptions of ash and mud. Violent eruptions in the late 1700s, 1800s and early 1900s created more fissures, lava flows, and ash-and-gas explosions. These damaged or destroyed many towns around the volcano, and sometimes killed people; the eruption of 1906 had more than 100 casualties. The most recent eruption was in 1944 during World War II. It caused major problems for the newly-arrived Allied forces in Italy when ash and rocks from the eruption destroyed planes and forced evacuations at a nearby airbase.</p>
-                <h3>History</h3>
-                <table align="center">
-                    <caption>Some notable eruptions in Vesuvius's history</caption>
-                    <tr>
-                        <th>Time</th>
-                        <th>Name</th>
-                        <th>Remark</th>
-                    </tr>
-                    <tr>
-                        <td>18,300 years ago</td>
-                        <td>Basal Pumice</td>
-                        <td>Formation of Somma caldera</td>
-                    </tr>
-                    <tr>
-                        <td>16,000 years ago</td>
-                        <td>Green Pumice</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>11,000 years ago</td>
-                        <td>Lagno Amendolare</td>
-                        <td>Smaller than the Mercato</td>
-                    </tr>
-                    <tr>
-                        <td>8,000 years ago</td>
-                        <td>Mercato</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>5,000 years ago</td>
-                        <td>Two unnamed</td>
-                        <td>Smaller than the Avellino</td>
-                    </tr>
-                    <tr>
-                        <td>3,800 years ago</td>
-                        <td>Avellino</td>
-                        <td>Destroyed several Bronze Age settlements</td>
-                    </tr>
-                    <tr>
-                        <td>AD 79</td>
-                        <td>Plinian Eruption</td>
-                        <td>Destroyed Pompeii and Herculaneum</td>
-                    </tr>
-                    <tr>
-                        <td>1906</td>
-                        <td>Unnamed</td>
-                        <td>Disrupted preparations for 1908 Summer Olympics</td>
-                    </tr>
-                    <tr>
-                        <td>1944</td>
-                        <td>Unnamed</td>
-                        <td>Destroyed aircrafts at Pompeii Airfield and some villages</td>
-                    </tr>
-                </table>
-            </section>
-            <section>
-                <h2>Tours</h2>
-                <p>We have tours around the volcano on the 10th of each month. Not for the faint hearted!</p>
-                <form>
-                    <fieldset>
-                        <legend>Tour Details</legend>
-                        <select id="kind" name="kind" required>
-                            <option value="">Select Kind of Tour</option>
-                            <option value="hike">Hiking</option>
-                            <option value="sight">Sightseeing</option>
-                            <option value="heli">Helicopter</option>
-                        </select>
-                        <select id="month" name="month" required>
-                            <option value="">Select Month</option>
-                            <option value="jan">January</option>
-                            <option value="feb">February</option>
-                            <option value="mar">March</option>
-                            <option value="apr">April</option>
-                            <option value="may">May</option>
-                            <option value="jun">June</option>
-                            <option value="jul">July</option>
-                            <option value="aug">August</option>
-                            <option value="sep">September</option>
-                            <option value="oct">October</option>
-                            <option value="nov">November</option>
-                            <option value="dec">December</option>
-                        </select>
-                        <div id="diet">
-                            <label for="diet">Dietary Requirements</label>
-                            <input type="radio" name="diet" id="halal" value="halal" required />Halal<br />
-                            <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
-                            <input type="radio" name="diet" id="none" value="none" />None
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Contact Details</legend>
-                        <input type="text" id="name" name="name" placeholder="Name" required />
-                        <!-- This contact number is not limited to Singaporeans -->
-                        <input type="text" id="contact" name="contact" placeholder="Contact" pattern="[+ 0-9]+" required />
-                        <textarea id="address" name="address" placeholder="Address" required></textarea>
-                    </fieldset>
-                    <input type="submit" value="Sign up!" />
-                </form>
-            </section>
+        <div id="aside-container">
+            <aside>
+                <h2>Links</h2>
+                <a class="tier1" href="#about">About</a>
+                <a class="tier2" href="#quickfacts">Quick facts</a>
+                <a class="tier1" href="#eruptions">Eruptions</a>
+                <a class="tier2" href="#history">History</a>
+                <a class="tier1" href="#tours">Tours</a>
+            </aside>
+        </div>
+        <div id="container">
+            <div id="content">
+                <section>
+                    <h1>Mount Vesuvius</h1>
+                    <p>Famous for the 79 AD eruption that wiped out the Roman cities of Pompeii and Herculaneum.</p>
+                    <div class="image">
+                        <a href="media/vesuvius/victims.jpg"><img src="media/vesuvius/victims.jpg" /></a>
+                        <p>Victims of the 79 AD eruption</p>
+                    </div>
+                </section>
+                <section>
+                    <h2 id="about">About</h2>
+                    <p>Vesuvius is the only active volcano in mainland Europe, and has produced some of the continent's largest volcanic eruptions. Located on Italy's west coast, it overlooks the Bay and City of Naples and sits in the crater of the ancient Somma volcano. Vesuvius is most famous for the 79 AD eruption which destroyed the Roman cities of Pompeii and Herculaneum. Though the volcano's last eruption was in 1944, it still represents a great danger to the cities that surround it, especially the busy metropolis of Naples.</p>
+                    <h3 id="quickfacts">Quick facts</h3>
+                    <ul>
+                        <li>Located in the West Coast of Italy</li>
+                        <li>Coordinates are 40°49′N 14°26′E</li>
+                        <li>1,281m elevation</li>
+                        <li><a href="https://en.wikipedia.org/wiki/Complex_volcano" target="_blank">Complex</a> type of volcano</li>
+                        <li>Last eruption in 1944</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 id="eruptions">Eruptions</h2>
+                    <p>Mount Vesuvius has experienced eight major eruptions in the last 17,000 years. The 79 AD eruption is one of the most well-known ancient eruptions in the world, and may have killed more than 16,000 people. Ash, mud and rocks from this eruption buried the cities of Pompeii and Herculaneum. Pompeii is famous for the casts the hot ash formed around victims of the eruptions. The unfortunate people suffocated on ash in the air, which then covered them and preserved amazing details of their clothing and faces.</p>
+                    <div class="image">
+                        <a href="media/vesuvius/eruption.jpg"><img src="media/vesuvius/eruption.jpg" /></a>
+                        <p>Mount Vesuvius erupting</p>
+                    </div>
+                    <p>Starting in 1631, Vesuvius entered a period of steady volcanic activity, including lava flows and eruptions of ash and mud. Violent eruptions in the late 1700s, 1800s and early 1900s created more fissures, lava flows, and ash-and-gas explosions. These damaged or destroyed many towns around the volcano, and sometimes killed people; the eruption of 1906 had more than 100 casualties. The most recent eruption was in 1944 during World War II. It caused major problems for the newly-arrived Allied forces in Italy when ash and rocks from the eruption destroyed planes and forced evacuations at a nearby airbase.</p>
+                    <h3 id="history">History</h3>
+                    <table align="center">
+                        <caption>Some notable eruptions in Vesuvius's history</caption>
+                        <tr>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Remark</th>
+                        </tr>
+                        <tr>
+                            <td>18,300 years ago</td>
+                            <td>Basal Pumice</td>
+                            <td>Formation of Somma caldera</td>
+                        </tr>
+                        <tr>
+                            <td>16,000 years ago</td>
+                            <td>Green Pumice</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>11,000 years ago</td>
+                            <td>Lagno Amendolare</td>
+                            <td>Smaller than the Mercato</td>
+                        </tr>
+                        <tr>
+                            <td>8,000 years ago</td>
+                            <td>Mercato</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>5,000 years ago</td>
+                            <td>Two unnamed</td>
+                            <td>Smaller than the Avellino</td>
+                        </tr>
+                        <tr>
+                            <td>3,800 years ago</td>
+                            <td>Avellino</td>
+                            <td>Destroyed several Bronze Age settlements</td>
+                        </tr>
+                        <tr>
+                            <td>AD 79</td>
+                            <td>Plinian Eruption</td>
+                            <td>Destroyed Pompeii and Herculaneum</td>
+                        </tr>
+                        <tr>
+                            <td>1906</td>
+                            <td>Unnamed</td>
+                            <td>Disrupted preparations for 1908 Summer Olympics</td>
+                        </tr>
+                        <tr>
+                            <td>1944</td>
+                            <td>Unnamed</td>
+                            <td>Destroyed aircrafts at Pompeii Airfield and some villages</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2 id="tours">Tours</h2>
+                    <p>We have tours around the volcano on the 10th of each month. Not for the faint hearted!</p>
+                    <form>
+                        <fieldset>
+                            <legend>Tour Details</legend>
+                            <select id="kind" name="kind" required>
+                                <option value="">Select Kind of Tour</option>
+                                <option value="hike">Hiking</option>
+                                <option value="sight">Sightseeing</option>
+                                <option value="heli">Helicopter</option>
+                            </select>
+                            <select id="month" name="month" required>
+                                <option value="">Select Month</option>
+                                <option value="jan">January</option>
+                                <option value="feb">February</option>
+                                <option value="mar">March</option>
+                                <option value="apr">April</option>
+                                <option value="may">May</option>
+                                <option value="jun">June</option>
+                                <option value="jul">July</option>
+                                <option value="aug">August</option>
+                                <option value="sep">September</option>
+                                <option value="oct">October</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                            <div id="diet">
+                                <label for="diet">Dietary Requirements</label>
+                                <input type="radio" name="diet" id="halal" value="halal" required />Halal<br />
+                                <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
+                                <input type="radio" name="diet" id="none" value="none" />None
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Contact Details</legend>
+                            <input type="text" id="name" name="name" placeholder="Name" required />
+                            <!-- This contact number is not limited to Singaporeans -->
+                            <input type="text" id="contact" name="contact" placeholder="Contact" pattern="[+ 0-9]+" required />
+                            <textarea id="address" name="address" placeholder="Address" required></textarea>
+                        </fieldset>
+                        <input type="submit" value="Sign up!" />
+                    </form>
+                </section>
+            </div>
         </div>
         </main>
     </body>
