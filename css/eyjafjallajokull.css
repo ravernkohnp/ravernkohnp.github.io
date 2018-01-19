@@ -131,6 +131,8 @@ form label {
 
 #bannerimg {
     z-index: 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .navbar {
@@ -140,4 +142,12 @@ form label {
     margin-top: 360px;
     text-shadow: 1px 1px 2px black;
     color: white;
+    height: auto;
+}
+
+html {
+    max-width: 100%;
+    min-width: 1280px;
+    max-height: 768px;
+    min-height: 100%;
 }

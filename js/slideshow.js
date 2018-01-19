@@ -9,19 +9,19 @@ var slideshowData = [
         image: "krakatoa.jpg",
         h3: "Indonesia",
         h1: "Krakatoa",
-        url: "#",
+        url: "krakatoa.html",
     },
     {
         image: "st-helens.jpg",
         h3: "Washington, USA",
         h1: "Mount St. Helens",
-        url: "#",
+        url: "st.helens.html",
     },
     {
         image: "eyjafjallajokull.jpg",
         h3: "Iceland",
         h1: "Eyjafjallajökull",
-        url: "#",
+        url: "eyjafjallajokull.html",
     },
 ];
 var currentSlide = 0;
