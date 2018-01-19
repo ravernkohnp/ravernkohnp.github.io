@@ -23,6 +23,7 @@
     <script src="js/dropdown.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/eyjafjallajokull.js"></script>
 </head>
 <body>
     <div id="background"></div>
@@ -34,13 +35,19 @@
         <div id="container">
             <div id="content">
                 <div id="banner">
-                    <img src="media/eyjafjallajokull/banner.jpg" />
-                    <p><i>Source: <a href="https://en.wikipedia.org/wiki/Eyjafjallaj%C3%B6kull">Wikipedia</a></i></p>
+                    <div id="navbar">
+                        <a href="#Volcano" class="navbar"><p>About</p></a>
+                        <a href="#Eruptions" class="navbar"><p>Eruptions</p></a>
+                        <a href="#Aftermath" class="navbar"><p>Aftermath</p></a>
+                        <a href="#addinfo" class="navbar"><p>Share Info</p></a>
+                    </div>
+                    <img src="media/eyjafjallajokull/banner.jpg" id="bannerimg"/>
+                    <p><i>Source: <a href="https://en.wikipedia.org/wiki/Eyjafjallaj%C3%B6kull" target="_blank">Wikipedia</a></i></p>
                 </div>
                 <h1>The Island's Mountain Glacier</h1>
                 <section>
                     <h2 id="Volcano">Eyjafjallajökull Volcano</h2>
-                    <p>Derived from the Icelandic phrase meaning "Island Mountain Glacier", the <a href="https://en.wikipedia.org/wiki/Eyjafjallaj%C3%B6kull" style="color: #0066CC">Eyjafjallajökull volcano</a> lies underneath the Eyjafjalla Glacier. It is located north of Skógar and west of Mýrdalsjökull, within Iceland's East Volcanic zone. The stratovolcano, with a summit elevation of 1651m, is completely covered by an ice cap. It has a 3-4km wide crater open northwards. On the rim, there are three main peaks: Guðnasteinn, Hámundur and Goðasteinn. Since the <a href="https://en.wikipedia.org/wiki/Last_glacial_period" style="color: #0066CC">last glacial period</a>, the volcano has erupted rather frequently, the most recent occurring in 2010.</p>
+                    <p style="margin-top:10px;">Derived from the Icelandic phrase meaning "Island Mountain Glacier", the <a href="https://en.wikipedia.org/wiki/Eyjafjallaj%C3%B6kull" target ="_blank" style="color: #0066CC">Eyjafjallajökull volcano</a> lies underneath the Eyjafjalla Glacier. It is located north of Skógar and west of Mýrdalsjökull, within Iceland's East Volcanic zone. The stratovolcano, with a summit elevation of 1651m, is completely covered by an ice cap. It has a 3-4km wide crater open northwards. On the rim, there are three main peaks: Guðnasteinn, Hámundur and Goðasteinn. Since the <a href="https://en.wikipedia.org/wiki/Last_glacial_period" target="_blank" style="color: #0066CC">last glacial period</a>, the volcano has erupted rather frequently, the most recent occurring in 2010.</p>
                 </section>
                 <section>
                     <h2 id="Eruptions">Eruptions</h2>
@@ -57,7 +64,7 @@
                 <section>
                     <h2 id="Aftermath">Aftermath</h2>
                     <p><i>A list of effects caused by the 2010 eruption of Eyjafjallajökull</i></p>
-                    <table align="center">
+                    <table id="EffectTable" align="center">
                         <tr align="center">
                             <td><b>Type</b></td>
                             <td><b>Impact</b></td>
@@ -95,6 +102,46 @@
                             <td>Professional wrestler Douglas Williams, who was to defend his TNA X Division Championship at the Total Nonstop Action Wrestling pay-per-view event Lockdown, was unable to fly out of the United Kingdom. This resulted in Williams being stripped of his title.</td>
                         </tr>
                     </table>
+                </section>
+                <section>
+                    <h2 id="addinfo">Share information</h2>
+                    <p>Know about some effects of the 2010 eruption that we don't? Feel free to contribute here!</p>
+                    <form onsubmit="addInfo(); return false;">
+                        <fieldset style="padding-left:2px;">
+                            <legend style="font-size:103%;"><b>User Information</b></legend>
+                            <div class="choice" id="name" style="padding-bottom:8px;">
+                                <label for="name">Name</label>
+                                <input placeholder="Enter your name" required/>
+                            </div>
+                            <div class="choice" id="gender">
+                                <label for="gender">Gender</label>
+                                <input type="radio" name="gender" id="male" value="Male" required/>Male<br />
+                                <input type="radio" name="gender" id="female" value="Female" />Female<br />
+                                <input type="radio" name="gender" id="unidentified" value="Unidentified" />Non-binary<br />
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend style="padding-top:15px;"><b>Effect Information</b></legend>
+                            <div class="choice">
+                                <p>Type:</p>
+                                <select id="type" required>
+                                    <option value="" disabled selected>Select Type</option>
+                                    <option value="Economic">Economic</option>
+                                    <option value="Political">Political</option>
+                                    <option vavlue="Cultural">Cultural</option>
+                                </select>
+                            </div>
+                                <div class="choice">
+                                    <p>Impact:</p>
+                                    <textarea id="impact" cols="30" rows="2" required></textarea>
+                                </div>
+                                <div class="choice">
+                                    <p>Description:</p>
+                                    <textarea id="description" cols="80" rows="5" required></textarea>
+                                </div>
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                    </form>
                 </section>
             </div>
         </div>

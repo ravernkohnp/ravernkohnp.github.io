@@ -84,8 +84,8 @@ table th, td {
 }
 
 #Aftermath {
-    padding-top: 40px;
-    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 td:nth-of-type(1) {
@@ -96,4 +96,48 @@ td:nth-of-type(2) {
     text-align: center;
 }
 
+#addinfo {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
 
+form {
+    background-color: beige;
+    padding: 10px 20px;
+    max-width: 595px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+form fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.choice {
+    padding-top: 5px;
+}
+
+form label {
+    display: block;
+}
+
+#navbar {
+    z-index: 4;
+    position: absolute;
+    display: inline;
+}
+
+#bannerimg {
+    z-index: 0;
+}
+
+.navbar {
+    font-size: 200%;
+    display: inline-block;
+    margin-left: 145px;
+    margin-top: 360px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+}
