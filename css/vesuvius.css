@@ -1,13 +1,13 @@
 h1, h2, h3, h4, h5, h6, p, img, ul {
-  margin: 0;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 ul, p {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 figure {
@@ -16,161 +16,175 @@ figure {
 }
 
 #background {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  background-image: url("../media/vesuvius.jpg");
-  background-position: center;
-  background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../media/vesuvius.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 main {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-main #aside-container {
-  margin: 0;
-  width: 300px;
-  padding: 100px 20px;
-}
+    main #aside-container {
+        margin: 0;
+        width: 300px;
+        padding: 100px 20px;
+    }
 
-main aside {
-  margin: 0;
-  background-color: white;
-  padding: 20px 20px;
-}
+    main aside {
+        position: fixed;
+        margin: 0;
+        background-color: white;
+        padding: 20px 20px;
+    }
 
-main aside h2 {
-  margin: 0;
-}
+        main aside h2 {
+            margin: 0;
+        }
 
-main aside a {
-  display: block;
-}
+        main aside a {
+            display: block;
+        }
 
-main aside .tier1 {
-  font-size: 1.1em;
-}
+        main aside .tier1 {
+            font-size: 1.1em;
+        }
 
-main aside .tier2 {
-  margin-left: 10px;
-}
+        main aside .tier2 {
+            margin-left: 10px;
+        }
 
-main #container {
-  max-width: 960px;
-  padding: 100px 20px;
-}
+    main #container {
+        max-width: 960px;
+        padding: 100px 20px;
+    }
 
-main #content {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-}
+    main #content {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+    }
 
-main #content section {
-  padding: 10px 0;
-}
+        main #content section {
+            padding: 10px 0;
+        }
 
-main #content h1 {
-  font-size: 2em;
-}
+        main #content h1 {
+            font-size: 2em;
+        }
 
-main #content h2 {
-  font-size: 1.7em;
-}
+        main #content h2 {
+            font-size: 1.7em;
+        }
 
-main #content .image {
-  padding: 30px;
-  text-align: center;
-}
+        main #content .image {
+            padding: 30px;
+            text-align: center;
+        }
 
-main #content .image img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: 640px;
-  max-width: 100%;
-}
+            main #content .image img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                width: 640px;
+                max-width: 100%;
+            }
 
-main #content .image figcaption {
-  display: block;
-  font-size: 0.8em;
-  color: #777777;
-}
+            main #content .image figcaption {
+                display: block;
+                font-size: 0.8em;
+                color: #777777;
+            }
 
 table {
-  text-align: left;
-  border-collapse: collapse;
+    text-align: left;
+    border-collapse: collapse;
 }
 
-table th, td {
-  border: 2px solid grey;
-  padding: 5px 8px;
-}
+    table th, td {
+        border: 2px solid grey;
+        padding: 5px 8px;
+    }
 
 form {
-  background-color: white;
-  padding: 10px 20px;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-top: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
-form fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  padding-right: 8px;
+    form fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        padding-right: 8px;
+    }
+
+        form fieldset legend {
+            font-weight: bold;
+        }
+
+    form #diet {
+        margin: 10px 0;
+    }
+
+        form #diet label {
+            padding-bottom: 5px;
+        }
+
+    form label {
+        display: block;
+    }
+
+    form input[type="text"], input[type="submit"], select, textarea {
+        display: block;
+        background-color: #f5f5f5;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1em;
+        padding: 5px;
+        border: none;
+        margin: 10px 0;
+    }
+
+    form input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    form textarea {
+        resize: vertical;
+    }
+
+    form input[type="text"], select, textarea {
+        width: 100%;
+    }
+
+    form input[type="submit"] {
+        background-color: white;
+        border: 2px solid black;
+        padding: 5px 10px;
+    }
+
+        form input[type="submit"]:hover {
+            background-color: black;
+            color: white;
+        }
+
+#open {
+    overflow: hidden;
+    display: inline-block;
+    margin: 20px 0;
+    border: 2px solid black;
+    padding: 5px 10px;
 }
 
-form fieldset legend {
-  font-weight: bold;
-}
-
-form #diet {
-  margin: 10px 0;
-}
-
-form #diet label {
-  padding-bottom: 5px;
-}
-
-form label {
-  display: block;
-}
-
-form input[type="text"], input[type="submit"], select, textarea {
-  display: block;
-  background-color: #f5f5f5;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1em;
-  padding: 5px;
-  border: none;
-  margin: 10px 0;
-}
-
-form input[type="radio"] {
-  margin-right: 5px;
-}
-
-form textarea {
-  resize: vertical;
-}
-
-form input[type="text"], select, textarea {
-  width: 100%;
-}
-
-form input[type="submit"] {
-  background-color: white;
-  border: 2px solid black;
-  padding: 5px 10px;
-}
-
-form input[type="submit"]:hover {
-  background-color: black;
-  color: white;
+#open-btn {
+    color: black;
 }

@@ -1,35 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Koh Chan Hong" />
-        <meta name="description" content="Mount Vesuvius - Volcanic" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Koh Chan Hong" />
+    <meta name="description" content="Mount Vesuvius - Volcanic" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Mount Vesuvius - Volcanic</title>
+    <title>Mount Vesuvius - Volcanic</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700i|Source+Sans+Pro:400,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700i|Source+Sans+Pro:400,700" />
 
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/vesuvius.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/vesuvius.css" />
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')</script>
 
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
-        <script>window.w3 || document.write('<script src="js/w3.js"><\/script>')</script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>window.w3 || document.write('<script src="js/w3.js"><\/script>')</script>
 
-        <script src="js/dropdown.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <div id="background"></div>
-        <header>
-            <!-- nav -->
-            <div w3-include-html="nav.html"></div>
-        </header>
-        <main>
+    <script src="js/dropdown.js"></script>
+    <script src="js/iform.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <!-- nav -->
+        <div w3-include-html="nav.html"></div>
+    </header>
+    <main>
         <div id="aside-container">
             <aside>
                 <h2>Links</h2>
@@ -128,50 +129,55 @@
                 <section>
                     <h2 id="tours">Tours</h2>
                     <p>We have tours around the volcano on the 10th of each month. Not for the faint hearted!</p>
-                    <form>
-                        <fieldset>
-                            <legend>Tour Details</legend>
-                            <select id="kind" name="kind" required>
-                                <option value="">Select Kind of Tour</option>
-                                <option value="hike">Hiking</option>
-                                <option value="sight">Sightseeing</option>
-                                <option value="heli">Helicopter</option>
-                            </select>
-                            <select id="month" name="month" required>
-                                <option value="">Select Month</option>
-                                <option value="jan">January</option>
-                                <option value="feb">February</option>
-                                <option value="mar">March</option>
-                                <option value="apr">April</option>
-                                <option value="may">May</option>
-                                <option value="jun">June</option>
-                                <option value="jul">July</option>
-                                <option value="aug">August</option>
-                                <option value="sep">September</option>
-                                <option value="oct">October</option>
-                                <option value="nov">November</option>
-                                <option value="dec">December</option>
-                            </select>
-                            <div id="diet">
-                                <label for="diet">Dietary Requirements</label>
-                                <input type="radio" name="diet" id="halal" value="halal" required />Halal<br />
-                                <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
-                                <input type="radio" name="diet" id="none" value="none" />None
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Contact Details</legend>
-                            <input type="text" id="name" name="name" placeholder="Name" required />
-                            <!-- This contact number is not limited to Singaporeans -->
-                            <input type="text" id="contact" name="contact" placeholder="Contact" pattern="[+ 0-9]+" required />
-                            <textarea id="address" name="address" placeholder="Address" required></textarea>
-                        </fieldset>
-                        <input type="submit" value="Sign up!" />
-                    </form>
+                    <div id="i-form">
+                        <div id="open">
+                            <a id="open-btn" href="#">Open form</a>
+                        </div>
+                        <form>
+                            <fieldset>
+                                <legend>Tour Details</legend>
+                                <select id="kind" name="kind" required>
+                                    <option value="">Select Kind of Tour</option>
+                                    <option value="hike">Hiking</option>
+                                    <option value="sight">Sightseeing</option>
+                                    <option value="heli">Helicopter</option>
+                                </select>
+                                <select id="month" name="month" required>
+                                    <option value="">Select Month</option>
+                                    <option value="jan">January</option>
+                                    <option value="feb">February</option>
+                                    <option value="mar">March</option>
+                                    <option value="apr">April</option>
+                                    <option value="may">May</option>
+                                    <option value="jun">June</option>
+                                    <option value="jul">July</option>
+                                    <option value="aug">August</option>
+                                    <option value="sep">September</option>
+                                    <option value="oct">October</option>
+                                    <option value="nov">November</option>
+                                    <option value="dec">December</option>
+                                </select>
+                                <div id="diet">
+                                    <label for="diet">Dietary Requirements</label>
+                                    <input type="radio" name="diet" id="halal" value="halal" required />Halal<br />
+                                    <input type="radio" name="diet" id="vege" value="vege" />Vegetarian<br />
+                                    <input type="radio" name="diet" id="none" value="none" />None
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Contact Details</legend>
+                                <input type="text" id="name" name="name" placeholder="Name" required />
+                                <!-- This contact number is not limited to Singaporeans -->
+                                <input type="text" id="contact" name="contact" placeholder="Contact" pattern="[+ 0-9]+" required />
+                                <textarea id="address" name="address" placeholder="Address" required></textarea>
+                            </fieldset>
+                            <input type="submit" value="Sign up!" />
+                        </form>
+                    </div>
                 </section>
             </div>
         </div>
-        </main>
-    </body>
+    </main>
+</body>
 </html>
 
