@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/sthelens.css" />
+    <link rel="stylesheet" href="css/flags.css">
+    <link href="https://fonts.googleapis.com/css?family=Syncopate|Ubuntu" rel="stylesheet">
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')</script>
@@ -22,11 +25,15 @@
     <script src="js/dropdown.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/countrySelect.min.js"></script>
+    <script src="js/collectinfo.js"></script>
+
 </head>
 <body>
     <header>
         <!-- nav -->
-        <div w3-include-html="nav.html"></div>
+        <div id="navbar" w3-include-html="nav.html"></div>
     </header>
 
     <div id="main">
@@ -36,8 +43,13 @@
             <h2>About</h2>
             <p>Mount St. Helens or Louwala-Clough (known as Lawetlat'la to the indigenous Cowlitz people, and Loowit to the Klickitat) is an active stratovolcano located in Skamania County, Washington, in the Pacific Northwest region of the United States. It is 96 miles (154 km) south of Seattle, Washington, and 50 miles (80 km) northeast of Portland, Oregon. Mount St. Helens takes its English name from the British diplomat Lord St Helens, a friend of explorer George Vancouver who made a survey of the area in the late 18th century. The volcano is located in the Cascade Range and is part of the Cascade Volcanic Arc, a segment of the Pacific Ring of Fire that includes over 160 active volcanoes. This volcano is well known for its ash explosions and pyroclastic flows.</p>
             <h2>The 1980 Eruption</h2>
-            <img src="media\sthelens\1980.jpg" />
-            <p>The first eruption of the volcano in 1980 was the first eruption in the continental United States outside of Alaska since 1917</p>
+            <img id="1980" src="media\sthelens\1980.jpg" />
+            <h3>Description</h3>
+            <p>On May 18, 1980, a major volcanic eruption occurred at Mount St. Helens, a volcano located in Skamania County, in the state of Washington, United States. The eruption (a VEI 5 event) was the most significant volcanic eruption to occur in the contiguous 48 U.S. states since the 1915 eruption of Lassen Peak in California. It has often been declared as the most disastrous volcanic eruption in United States history. The eruption was preceded by a two-month series of earthquakes and steam-venting episodes, caused by an injection of magma at shallow depth below the volcano that created a large bulge and a fracture system on the mountain's north slope.
+               An earthquake at 8:32:17 a.m. PDT (UTC−7) on Sunday, May 18, 1980, caused the entire weakened north face to slide away, creating the largest landslide ever recorded. This allowed the partly molten, high-pressure gas- and steam-rich rock in the volcano to suddenly explode northwards toward Spirit Lake in a hot mix of lava and pulverized older rock, overtaking the avalanching face.
+               An eruption column rose 80,000 feet (24 km; 15 mi) into the atmosphere and deposited ash in 11 U.S. states. At the same time, snow, ice and several entire glaciers on the volcano melted, forming a series of large lahars (volcanic mudslides) that reached as far as the Columbia River, nearly 50 miles (80 km) to the southwest. Less severe outbursts continued into the next day, only to be followed by other large, but not as destructive, eruptions later that year. Thermal energy released during the eruption was equal to 26 megatons.
+               Approximately 57 people were killed directly, including innkeeper Harry R. Truman, photographers Reid Blackburn and Robert Landsburg, and geologist David A. Johnston. Hundreds of square miles were reduced to wasteland, causing over a billion U.S. dollars in damage ($3.03 billion in 2017 dollars), thousands of animals were killed, and Mount St. Helens was left with a crater on its north side. At the time of the eruption, the summit of the volcano was owned by the Burlington Northern Railroad, but afterward the land passed to the United States Forest Service. The area was later preserved, as it was, in the Mount St. Helens National Volcanic Monument.
+            </p>
             <h3>Damages Caused</h3>
             <table>
                 <tr>
@@ -53,7 +65,56 @@
                     <td>$1.1 Billion estimated damages and $950 Million in emergency funds</td>
                 </tr>
             </table>
+            <div id="preorderpage">
+            <section class="preorderform">
+                <div id="form">
+                    <h2>Pre-Order interest form</h2><h4>Hello, do send us your details if you are interested in getting news and updates about the Mount St. Helens</h4>
+                    <form id="porderform" name="porderform" onsubmit="return validateForm();" action="thanks.html" method="get">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                        <label for="updates">Updates</label>
+                        <div id="radioinput">
+                            <input type="radio" id="update" name="updates" value="Daily" checked />Daily
+                            <input type="radio" id="update" name="updates" value="Monthly" />Monthly
+                            <input type="radio" id="update" name="updates" value="Biannual"/>Biannual
+                        </div>
+                        <label for="country_selector">Country</br></label>
+                        <input type="text" id="country_selector" name="country">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
+            </div>
         </div>
     </div>
 </body>
+<script>
+            $("#country_selector").countrySelect({
+                preferredCountries: ['sg']
+            });
+
+            function validateForm() {
+                var x = document.forms["porderform"]["fname"].value;
+                if (x == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+                var x = document.forms["porderform"]["lname"].value;
+                if (x == "") {
+                    alert("Last name must be filled out");
+                    return false;
+                }
+                var x = document.forms["porderform"]["email"].value;
+                var atpos = x.indexOf("@");
+                var dotpos = x.lastIndexOf(".");
+                if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                    alert("Not a valid e-mail address");
+                    return false;
+                }
+            }
+</script>
 </html>
