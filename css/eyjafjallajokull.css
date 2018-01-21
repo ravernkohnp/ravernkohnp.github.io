@@ -1,0 +1,153 @@
+﻿#background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../media/eyjafjallajokull.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main #container {
+    max-width: 1280px;
+    padding-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main #content {
+    background-color: rgba(224, 224, 224, 0.65);
+    padding: 30px;
+    text-align: left;
+}
+
+#banner {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#banner p {
+    text-align: right;
+    font-size: 90%;
+    padding-right: 10px;
+    margin-top: 0;
+}
+
+h1 {
+    padding-top: 0;
+    text-align: center;
+    margin-top: 0;
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+#Volcano{
+    padding-top: 10px;
+}
+
+h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+dl {
+    margin: 0;
+}
+
+#Eruptions {
+    margin-top: 40px;
+}
+
+dd {
+    margin-bottom: 15px;
+}
+
+dl {
+    margin-left: 20px;
+}
+
+dt {
+    margin-top: 20px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, td {
+    border: 2px solid grey;
+    padding: 8px 10px;
+}
+
+#Aftermath {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+td:nth-of-type(1) {
+    text-align: center;
+}
+
+td:nth-of-type(2) {
+    text-align: center;
+}
+
+#addinfo {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: beige;
+    padding: 10px 20px;
+    max-width: 595px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+form fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.choice {
+    padding-top: 5px;
+}
+
+form label {
+    display: block;
+}
+
+#navbar {
+    z-index: 4;
+    position: absolute;
+    display: inline;
+}
+
+#bannerimg {
+    z-index: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    font-size: 200%;
+    display: inline-block;
+    margin-left: 145px;
+    margin-top: 360px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    height: auto;
+}
+
+html {
+    max-width: 100%;
+    min-width: 1280px;
+    max-height: 768px;
+    min-height: 100%;
+}
