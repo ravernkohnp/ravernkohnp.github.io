@@ -10,24 +10,154 @@
     margin: auto;
     text-align: left;
     background-size: cover;
-    background-color: white;
+    background-color: rgba(0,0,0, 0.25);
+    color: mintcream;
     z-index: -1;
+    margin-bottom:20px;
+    padding-bottom:10px;
 }
 
 #test {
-    padding: 50px;
+    margin-top: 61.2px;
+    padding: 10px 20px 20px;
 }
-
 img {
     max-height: 100%;
     max-width: 100%;
 }
+img:hover {
+
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-collapse: collapse;
 }
 
 th, td {
     padding: 15px;
+}
+
+header{
+    align-content:center;
+}
+#navbar {
+    padding: 10px 0;
+    width: 100%;
+    z-index: 2;
+}
+.preorderform {
+    position: relative;
+    top: 10px;
+    margin: auto auto;
+    width: 100%;
+    font-size: 15px;
+}
+
+    .preorderform h2 {
+
+    }
+
+#form {
+    position: relative;
+    margin: auto;
+    width: 90%;
+}
+
+#porderform{
+    color: black;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+}
+#radioinput{
+    margin-top:5px;
+    margin-bottom:5px;
+    color:mintcream;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #151F2E;
+    color: #E5E5E5;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #051121;
+    }
+
+form {
+    border-radius: 5px;
+    background-color: #051121;
+    padding: 20px;
+}
+
+    form label {
+        color: #F0E000;
+    }
+#thanks {
+    margin-top: 10%;
+    padding-left: 6%;
+    width:30%;
+    background-color: rgba(0,0,0, 0.25);
+    color: mintcream;
 }
